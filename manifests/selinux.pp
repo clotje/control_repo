@@ -8,7 +8,7 @@ $selinux_config = '/etc/selinux/config'
 class security::selinux{
 
 file_line{'Setting SELinux to Permissive mode permanently on the client':
-  onlyif => '/bin/test -e /etc/selinux/config',
+  #onlyif => '/bin/test -e /etc/selinux/config',
   path   => '/etc/selinux/config',
   line   => 'SELINUX=permissive',
   match  => "^SELINUX=.*$",
