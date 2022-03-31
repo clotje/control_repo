@@ -1,14 +1,15 @@
 # @summary LIM RHEL8 SELinux RHEL8 Security
 #
 # Setting SELinux to Permissive mode permanently 
-# Set setenforce to 0 -> no reboot needed ....
 #
-$selinux_config = '/etc/selinux/config'
-
+#
 class security::selinux{
 
-file_line{'Setting SELinux to Permissive mode permanently on the client':
-  #onlyif => '/bin/test -e /etc/selinux/config',
+file { '/etc/selinux/config':
+  ensure => present,
+}~>
+
+file_line{'Setting SELinux to Permissive mode permanently':
   path   => '/etc/selinux/config',
   line   => 'SELINUX=permissive',
   match  => "^SELINUX=.*$",
