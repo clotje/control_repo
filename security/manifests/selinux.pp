@@ -1,7 +1,7 @@
 # @summary LIM RHEL8 SELinux RHEL8 Security
 #
 # Setting SELinux to Permissive mode permanently 
-# Set setenforce to 0 -> no reboot needed
+# Set setenforce to 0 -> no reboot needed ....
 #
 $selinux_config = '/etc/selinux/config'
 
