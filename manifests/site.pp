@@ -12,7 +12,7 @@ file_line{'Setting SELinux to Permissive mode permanently':
 }
 
 exec{'noreboot':
-  path        => '/sbin",
+  path        => "/bin:/sbin:/usr/bin:/usr/sbin:",
   command     => 'setenforce 0',
   refreshonly => true,
 }
