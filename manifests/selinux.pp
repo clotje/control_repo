@@ -3,7 +3,7 @@
 # Setting SELinux to Permissive mode permanently 
 #
 #
-class selinux{
+node default{
 
 file_line{'Setting SELinux to Permissive mode permanently':
   path   => '/etc/selinux/config',
