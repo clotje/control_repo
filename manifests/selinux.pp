@@ -4,7 +4,7 @@
 #
 # Variables
 $selinx_config = "/etc/selinux/config"
-$check_config  = check_bestand("$selinx_config")
+$check_config  = check_file("$selinx_config")
 #
 # Eigen Ruby Functies
 #    --> check_bestand.rb [in lib/puppet/parser/functions]
