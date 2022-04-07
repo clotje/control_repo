@@ -3,7 +3,7 @@
 # Setting SELinux to Enforced mode permanently
 #
 class security::selinux{
-file_line { 'Setting SELinux to "disabled", "permissive", or "enforcing" mode permanently':
+file_line { 'Force SELinux to "enforcing" mode permanently':
   path   => '/etc/selinux/config',
   line   => 'SELINUX=enforcing',
   match  => '^SELINUX=.*$',
